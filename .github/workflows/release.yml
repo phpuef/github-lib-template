@@ -1,0 +1,22 @@
+name: Create Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      tag_name:
+        description: 'Tag name for the release'
+        required: true
+        default: 'v1.0.0'
+      release_type:
+        description: 'Release type (stable, beta, rc)'
+        required: true
+        default: 'stable'
+
+jobs:
+  call-release:
+    uses: gouef/github-lib-template/.github/workflows/shared_release.yml@main
+    with:
+      branch: ${{ github.ref_name }}
