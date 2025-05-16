@@ -1,0 +1,14 @@
+{
+    "name": "phpuef/github-lib-template",
+    "type": "template",
+    "require": {
+        "phpunit/phpunit": "12.2.x-dev"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jan Galek"
+        }
+    ],
+    "minimum-stability": "dev"
+}

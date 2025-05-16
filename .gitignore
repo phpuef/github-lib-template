@@ -5,6 +5,7 @@
 /vendor
 /coverage.txt
 /coverage.*
+/composer.lock
 # Binaries for programs and plugins
 *.exe
 *.exe~
@@ -20,10 +21,6 @@
 
 # Dependency directories (remove the comment below to include it)
 # vendor/
-
-# Go workspace file
-go.work
-go.work.sum
 
 # env file
 .env
