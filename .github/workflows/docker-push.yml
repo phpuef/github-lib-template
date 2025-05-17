@@ -1,7 +1,7 @@
 name: Build and Push Docker image on Release
 
-on:
-  workflow_run:
+#on:
+#  workflow_run:
 #    workflows: ["Create Release"]
 #    types:
 #      - completed
