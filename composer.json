@@ -10,5 +10,15 @@
             "name": "Jan Galek"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "Phpuef\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\Phpuef\\": "tests"
+        }
+    }
 }
