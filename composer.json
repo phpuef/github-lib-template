@@ -2,7 +2,7 @@
     "name": "phpuef/github-lib-template",
     "type": "template",
     "require": {
-        "phpunit/phpunit": "12.2.x-dev"
+        "phpunit/phpunit": "^12"
     },
     "license": "MIT",
     "authors": [
@@ -10,7 +10,7 @@
             "name": "Jan Galek"
         }
     ],
-    "minimum-stability": "dev",
+    "minimum-stability": "stable",
     "autoload": {
         "psr-4": {
             "Phpuef\\": "src"
