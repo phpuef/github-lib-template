@@ -21,6 +21,7 @@ Github template for new libraries
 
 [![Go Implementation](https://img.shields.io/badge/Go-github--lib--template-00ADD8?logo=Go&logoColor=white)](https://github.com/gouef/github-lib-template)
 [![PHP Implementation](https://img.shields.io/badge/PHP-github--lib--template-4F5D95?logo=php&logoColor=white)](https://github.com/phpuef/github-lib-template)
+[![JavaScript Implementation](https://img.shields.io/badge/JavaScript-github--lib--template-f1e05a?logo=javascript&logoColor=black)](https://github.com/jsuef/github-lib-template)
 
 
 ## Introduction
