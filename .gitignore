@@ -5,8 +5,10 @@
 /vendor
 /coverage.txt
 /coverage.*
+/coverage
 /composer.lock
 /.phpunit*
+/
 # Binaries for programs and plugins
 *.exe
 *.exe~
