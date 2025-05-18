@@ -2,23 +2,49 @@ name: Run tests and upload coverage
 
 on:
   workflow_dispatch:
-#  pull_request:
-#    types: [opened, synchronize, edited]
-#  push:
+  pull_request:
+    types: [opened, synchronize, edited]
+  push:
 
 permissions:
   id-token: write
   contents: read
 
 jobs:
-  test:
-    name: Run tests and collect coverage
-    runs-on: ubuntu-latest
-    steps:
-      - name: Run tests and upload to coverage
-        uses: gouef/go-test-with-coverage-action@main
-        with:
-          go-version: 1.23.4
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
+    tests:
+      runs-on: ubuntu-latest
+
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@main
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Set up PHP
+          uses: shivammathur/setup-php@v2
+          with:
+            php-version: '8.4'
+            extensions: mbstring, pdo, pdo_sqlite, dom, curl, xdebug
+            coverage: xdebug
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Install dependencies
+          run: composer install --prefer-dist --no-progress
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+        - name: Run PHPUnit with coverage
+          run: vendor/bin/phpunit --coverage-filter=src --coverage-text=coverage.txt --coverage-clover=coverage.xml --do-not-cache-result
+
+        - name: Upload coverage to Codecov
+          uses: codecov/codecov-action@v5
+          with:
+            files: ./coverage.xml
+            token: ${{ secrets.CODECOV_TOKEN }}
+            flags: unittests
+            fail_ci_if_error: true
+            verbose: true
+          env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+            CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}

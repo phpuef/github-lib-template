@@ -1,8 +1,16 @@
 {
-    "name": "phpuef/github-lib-template",
+    "name": "phpuef/currency",
     "type": "template",
-    "require": {
-        "phpunit/phpunit": "^12"
+    "require-dev": {
+        "phpunit/phpunit": "^12.1",
+        "phpstan/phpstan": "^2.1",
+        "phpstan/phpstan-deprecation-rules": "^2.0",
+        "phpstan/phpstan-phpunit": "^2.0",
+        "phpstan/extension-installer": "^1.4",
+        "phpstan/phpstan-strict-rules": "^2.0",
+        "squizlabs/php_codesniffer": "^3.13",
+        "contributte/qa": "^0.3.2",
+        "slevomat/coding-standard": "^8.18.0"
     },
     "license": "MIT",
     "authors": [
@@ -20,5 +28,19 @@
         "psr-4": {
             "Tests\\Phpuef\\": "tests"
         }
+    },
+    "config": {
+        "platform": {
+            "php": "8.4"
+        },
+        "allow-plugins": {
+            "phpstan/extension-installer": true,
+            "dealerdirect/phpcodesniffer-composer-installer": true
+        }
+    },
+    "scripts": {
+        "phpstan": "phpstan analyse",
+        "cs": "phpcs --standard=PSR12 src tests",
+        "cs:fix": "phpcbf --standard=PSR12 src tests"
     }
 }

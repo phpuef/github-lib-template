@@ -6,10 +6,11 @@ Github template for new libraries
 [![Static Badge](https://img.shields.io/badge/Github-phpuef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/phpuef/github-lib-template)
 
 ![Packagist Downloads](https://img.shields.io/packagist/dt/phpuef/github-lib-template)
-[![GoDoc](https://pkg.go.dev/badge/github.com/phpuef/github-lib-template.svg)](https://pkg.go.dev/github.com/phpuef/github-lib-template)
 [![GitHub stars](https://img.shields.io/github/stars/phpuef/github-lib-template?style=social)](https://github.com/phpuef/github-lib-template/stargazers)
-[![Go Report Card](https://goreportcard.com/badge/github.com/phpuef/github-lib-template)](https://goreportcard.com/report/github.com/phpuef/github-lib-template)
+![PHPStan](https://github.com/phpuef/github-lib-template/actions/workflows/phpstan.yml/badge.svg)
+[![Tests](https://github.com/phpuef/github-lib-template/actions/workflows/tests.yml/badge.svg)](https://github.com/phpuef/github-lib-template/actions/workflows/tests.yml)
 [![codecov](https://codecov.io/github/phpuef/github-lib-template/branch/main/graph/badge.svg?token=YUG8EMH6Q8)](https://codecov.io/github/phpuef/github-lib-template)
+
 
 ## Versions
 ![Stable Version](https://img.shields.io/github/v/release/phpuef/github-lib-template?label=Stable&labelColor=green)
@@ -23,8 +24,8 @@ This is template repository for new libraries
 
 ## Important
 
-- Edit go.mod and rename to your package module
-- Uncomment .github/workflows/tests.yml
+- Edit composer.json and rename to your package name
+- Uncomment .github/workflows/tests.yml, .github/workflows/phpstan.yml, .github/workflows/coding-standard.yml
 
 ## Contributing
 

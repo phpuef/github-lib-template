@@ -1,0 +1,17 @@
+parameters:
+    level: 8
+    paths:
+        - src
+        - tests
+
+#    checkMissingIterableValueType: true
+#    checkGenericClassInNonGenericObjectType: true
+    reportUnmatchedIgnoredErrors: false
+#    ignoreErrors:
+#        - '#Call to an undefined method PHPUnit\\Framework\\TestCase::.*#'
+
+includes:
+    - vendor/phpstan/phpstan/conf/bleedingEdge.neon
+
+# extensions:
+#     - PHPStan\ExtensionInstaller\GeneratedConfig
