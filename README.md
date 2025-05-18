@@ -22,6 +22,13 @@ Github template for new libraries
 
 This is template repository for new libraries
 
+
+## Installation
+
+```shell
+  composer require phpuef/github-lib-template
+```
+
 ## Important
 
 - Edit composer.json and rename to your package name
