@@ -5,7 +5,7 @@ Github template for new libraries
 
 [![Static Badge](https://img.shields.io/badge/Github-phpuef%2Fgithub--lib--template-blue?style=for-the-badge&logo=github&link=github.com%2Fgouef%2Fgithub-lib-template)](https://github.com/phpuef/github-lib-template)
 
-![Packagist Downloads](https://img.shields.io/packagist/dt/phpuef/github-lib-template)
+[![Packagist Downloads](https://img.shields.io/packagist/dt/phpuef/github-lib-template)](https://packagist.org/packages/phpuef/github-lib-template)
 [![GitHub stars](https://img.shields.io/github/stars/phpuef/github-lib-template?style=social)](https://github.com/phpuef/github-lib-template/stargazers)
 ![PHPStan](https://github.com/phpuef/github-lib-template/actions/workflows/phpstan.yml/badge.svg)
 [![Tests](https://github.com/phpuef/github-lib-template/actions/workflows/tests.yml/badge.svg)](https://github.com/phpuef/github-lib-template/actions/workflows/tests.yml)
