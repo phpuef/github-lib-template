@@ -1,5 +1,6 @@
 name: coding-standard
-#on:
+on:
+  workflow_run:
 #  pull_request:
 #    types: [opened, synchronize, edited]
 #  push:
